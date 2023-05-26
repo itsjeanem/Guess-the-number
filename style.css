@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #daffed;
+  font-family: "Roboto Condensed", sans-serif;
+  overflow: hidden;
+}
+
+.container, .container .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container h1, .container .box h1 {
+  margin-top: 56px;
+}
+.container .box {
+  margin-top: 40px;
+  gap: 32px;
+}
+
+.box button {
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #daffed;
+  border: 2px solid #000 !important;
+  position: relative;
+  box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
+}
+.box button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: white;
+  transition: all 0.5s;
+}
+.box button:hover {
+  background-color: white;
+}
+.box button:hover::after {
+  background-color: #daffed;
+}
+.box button:active {
+  top: 5px;
+  left: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+.box input {
+  background-color: #daffed;
+  padding: 5px 30px;
+  border: 2px solid #000 !important;
+  position: relative;
+  box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
+}
+.box input:focus {
+  border: none;
+  outline: none;
+  background-color: white;
+}/*# sourceMappingURL=style.css.map */

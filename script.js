@@ -16,12 +16,14 @@ function startGame() {
   infoText.textContent = 'The game has begun, guess the mystery number. Guess a number between 1 and 100';
 
   globalThis.mysteryNumber = Math.floor(Math.random() * 100) + 1;
-  console.log(mysteryNumber);
+  //   console.log(mysteryNumber);
 }
 
 function stopGame() {
   window.location.reload();
 }
+
+let numberOfTrials = 5;
 
 function handleGuess() {
   let inputNumber = document.getElementById('number').value;
@@ -29,7 +31,6 @@ function handleGuess() {
   let trailText = document.getElementById('trials_text');
   let infoText = document.getElementById('info_text');
   const guessDiv = document.querySelector('.guess');
-  let numberOfTrials = 5;
 
   const { action } = startBtn.dataset;
   if (action === 'start') {
@@ -44,7 +45,7 @@ function handleGuess() {
       } else if (inputNumber > 100) {
         alert('Enter a number between 1 and 100');
       } else {
-        if (numberOfTrials > 0) {
+        if (numberOfTrials > 1) {
           if (mysteryNumber > inputNumber) {
             returnText.textContent = `${inputNumber} is less than the mystery number`;
             numberOfTrials -= 1;
@@ -61,6 +62,10 @@ function handleGuess() {
           }
         } else {
           returnText.textContent = `Sorry you lose, the mystery number was ${mysteryNumber}`;
+          numberOfTrials -= 1;
+          trailText.innerText = `Number of tests remaining: ${numberOfTrials}`;
+          infoText.textContent = '';
+          guessDiv.style.display = 'none';
         }
       }
     }

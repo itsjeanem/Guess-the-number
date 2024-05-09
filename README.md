@@ -1,6 +1,6 @@
 # Guess the number
 
-The goal is to find the exact number, between 1 and 100. You have 5 tries!
+The aim of this little game is to find the mystery number between 1 and 100 in 5 tries.
 
 ## Demo
 

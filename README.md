@@ -6,7 +6,7 @@ The aim of this little game is to find the mystery number between 1 and 100 in 5
 
 - [Guess the number](https://itsjeanem.github.io/Guess-the-number)
 
-## Authors
+## Author
 
 - [@Jeanem](https://github.com/ItsJeanem)
 
